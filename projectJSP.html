@@ -280,13 +280,13 @@
   <br>&nbsp;&nbsp;&nbsp;3.7.3. 모델(m) 생성  <b><span style=" border-bottom: 1px dotted #353535;">(관여파일 : BDao.java, BDto.java)</b></span><br>
 
   &nbsp;&nbsp;&nbsp;: DTO필드 선언 후, DAO에서 DB에 연결하고 query문을 작성함.<br> <br> <img class="g"  src="./assets/images/picpic/Bdao.png" style=" display:block; margin:0 auto;" ><br>
-  &nbsp;&nbsp;&nbsp; <span style="color:gray;">▶</span> 새글 등록 메서드 : 쿼리문 두개를 실행하여, 먼저 query에서 Group값에 0을 넣어주고(null방지), query2에서 Group값을 id와 같은 값으로 세팅.<br>  
+  &nbsp;&nbsp;&nbsp; <span style="color:gray;">▶</span> 새글 등록 메서드(Write) : 쿼리문 두개를 실행하여, 먼저 query에서 Group값에 0을 넣어주고(null방지), query2에서 Group값을 id와 같은 값으로 세팅.<br>  
   <img class="g"  src="./assets/images/pic/111.png" ><br><br>  
   &nbsp;&nbsp;&nbsp; <span style="color:gray;">▶</span> ReplyShape메서드 : 새로 등록될 글의 bStep값이 이전 bStep값보다 크다면 하나씩 증가시켜줌<br>  
   <img  class="g" src="./assets/images/pic/replyShape.png" ><br><br>  
-  &nbsp;&nbsp;&nbsp; <span style="color:gray;">▶</span> 답글 등록 메서드 :  ReplyShape를 실행하고, Step값을 +1시켜주고 insert하므로 먼저 쓴 글이 항상 1만큼 증가<br>  
+  &nbsp;&nbsp;&nbsp; <span style="color:gray;">▶</span> 답글 등록 메서드(Reply) :  ReplyShape를 실행하고, Step값을 +1시켜주고 insert하므로 먼저 쓴 글이 항상 1만큼 증가<br>  
   <img class="g"  src="./assets/images/pic/reply.png" ><br><br>  
-  &nbsp;&nbsp;&nbsp;<span style="color:gray;">▶</span> 목록 호출 메서드 : 순서에 맞게 정렬. 이때 bStep은 오름차순으로 하여 최근 답글이 그룹 내 상단에 위치.<br>
+  &nbsp;&nbsp;&nbsp;<span style="color:gray;">▶</span> 목록 호출 메서드(list) : 순서에 맞게 정렬. 이때 bStep은 오름차순으로 하여 최근 답글이 그룹 내 상단에 위치.<br>
 <img class="g"  src="./assets/images/pic/query.png" ><br>
 
  <br>&nbsp;&nbsp;&nbsp;3.7.4. 뷰(v) 생성<b>
