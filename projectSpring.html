@@ -231,7 +231,7 @@ iframe {
   <br><br>
 <div class="ddd1" >
   <div class="video">
-    1. [패턴 구조 : 다음 구조를 가지고 작업을 처리했습니다.] <span style="text-align:right;"><a href="#list">[▲목차]</a></span>
+    1. [패턴 구조 : 다음 구조를 가지고 작업을 처리했습니다.] <span style="display:block; margin : 0 0 0 auto ;"><a href="#list">[▲목차]</a></span>
 
 </div>
 <br>
@@ -244,7 +244,7 @@ iframe {
   <br><br>
 <div class="ddd1">   
   <div class="video">
-    2. [데이터 관계도] <span style="text-align:right;"><a href="#list">[▲목차]</a></span>
+    2. [데이터 관계도] <span style="display:block; margin : 0 0 0 auto ;"><a href="#list">[▲목차]</a></span>
 </div><br>
 <img id="data"  src="./assets/images/bmjdb/entity.png"  style=" display:block; margin : 0  auto ;"><br>
 <br>
@@ -257,7 +257,7 @@ iframe {
 </div>
 <div id = "list3">
   <br><br> <div class="ddd1">   <div class="video">
-  3. [기능별 개발 과정] <span style="text-align:right;"><a href="#list">[▲목차]</a></span></div>
+  3. [기능별 개발 과정] <span style="display:block; margin : 0 0 0 auto ;"><a href="#list">[▲목차]</a></span></div>
 <br>
 
 <span style="font-size: 20px;"><b>3.1. 식당 데이터 CRUD처리</b></span><br>
@@ -325,7 +325,7 @@ iframe {
 </div></div> 
 <div id = "list4">
   <br><br> <div class="ddd1">   <div class="video">
-4. [개선사항 및 새롭게 학습한 것] <span style="text-align:right;"><a href="#list">[▲목차]</a></span></div>
+4. [개선사항 및 새롭게 학습한 것] <span style="display:block; margin : 0 0 0 auto ;"><a href="#list">[▲목차]</a></span></div>
 <br>
 
 <li>가장 큰 문제점 : 현재 회원가입을 거쳐 회원id에 해당하는 이메일 주소가 DB에 있는 멤버만 리뷰창에서 전송되는 이메일 값을 검증하여 리뷰 등록이 가능합니다. 그런데 현재 리뷰창에 로그인된 유저의 이메일을 받아오는 메서드를 컨트롤러에서 정의하여 사용하고 있는데, 이렇게 하면 리뷰 등록 기능은 맛집 조회 페이지 안에 소속된 모달창이기 때문에, id가 null값(=공백)인 로그인 하지 않은 유저가 맛집 조회 페이지에 접근하게 되면 예외(=문제)가 발생하여 접근할 수 없게 됩니다. 그래서 로그인한 유저라도 리뷰 모달창에서 직접 이메일을 입력하여 리뷰를 등록하게끔 최종 구현했습니다. 저의 메서드에 문제가 있는지 다시 검토해보고 싶습니다.
